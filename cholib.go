@@ -5,10 +5,10 @@ import (
 	"time"
 	"golang.org/x/net/websocket"
 )
-// IMPORTS, BITCH!
+// IMPORTS, YAY!
 
 func onInit() string {
-	return "[INIT] Golang 10 min lib for Shitty mongo/Chatango (@Coil) initiated. " + time.Now().String()
+	return "[INIT] Golang 10 min lib for Chatango (@Coil) initiated. " + time.Now().String()
 }
 
 func main() {
@@ -21,13 +21,13 @@ func main() {
 		fmt.Println("[FATAL] ERR NIGNOG")
 	}
 	ws.Write([]byte("bauth:hazerdklan::Coil:password\x00")) // tested at the klan
-	time.Sleep(10000000000) // Needs a delay. HAVE YOUR FUCKING DELAY, CHATANGO
+	time.Sleep(10000000000) // Needs a delay. HAVE YOUR DELAY, CHATANGO
 	ws.Write([]byte("bm:t12j:256:<nED1C24/><f x11555555=\"0\">get rekt mofucka\r\n\x00")) // Send a message
 	for init == 1 { // Golang's while loop equivalent
 		time.Sleep(100) // MORE SLEEPING FUUUUUUUUUUUUUUUUUUUUU
 		buf := make([]byte,1024) // Receive from the websocket
 		var n int // cursor
-		if n, err = ws.Read(buf); err != nil { // Make sure this shit isn't null, nignog
+		if n, err = ws.Read(buf); err != nil { // Make sure the data isn't null, nignog
 			fmt.Println("[FATAL] ERR NIGNOG") // but in the event that it is null...
 		}
 		fmt.Printf("%s\n", buf[:n]) // Print the data!
