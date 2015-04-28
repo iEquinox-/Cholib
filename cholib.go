@@ -12,7 +12,6 @@ func onInit() string {
 }
 
 func main() {
-	init := 1
 	fmt.Println(onInit()) // Friendly little init message.
 	origin := "http://st.chatango.com" // Origin required, thank Chatango for that.
 	url := "ws://s23.chatango.com:1800" // Websocket server for the chat.
@@ -23,7 +22,7 @@ func main() {
 	ws.Write([]byte("bauth:hazerdklan::Coil:password\x00")) // tested at the klan
 	time.Sleep(10000000000) // Needs a delay. HAVE YOUR DELAY, CHATANGO
 	ws.Write([]byte("bm:t12j:256:<nED1C24/><f x11555555=\"0\">get rekt mofucka\r\n\x00")) // Send a message
-	for init == 1 { // Golang's while loop equivalent
+	for { // Golang's while loop equivalent
 		time.Sleep(100) // MORE SLEEPING FUUUUUUUUUUUUUUUUUUUUU
 		buf := make([]byte,1024) // Receive from the websocket
 		var n int // cursor
